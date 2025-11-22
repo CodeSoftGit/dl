@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "open-dl-py"
+version = "0.2.0"
+description = "Smart download dispatcher that selects curl, yt-dlp, aria2c, gallery-dl, and more."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+license = "MIT"
+
+[project.scripts]
+dl = "dl.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
